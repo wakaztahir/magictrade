@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
+    <title>TRADE___SAFE</title>
+</head>
+<body>
+    <header>
+        <div class="navbaropt1">
+            <h1>Trade<span>Safe</span></h1>
+            <a href="home.html">Home</a>
+            <a href="terms.html">Terms</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div class="navbaropt2">
+            <a href="checktrade.html"><button class="checktrade">CHECK TRADE</button></a>
+            <a href="starttrade.html"><button class="starttrade">START TRADE</button></a>
+        </div>
+    </header>
+    
+    <div class="starttrades">
+        <div class="trade-agreement">
+            <h2>Important!</h2>
+            <p>The trade agreement needs to contain all these details:</p>
+            <ul>
+                <li>What the seller is going to provide?</li>
+                <li>How the seller is going to provide it?</li>
+                <li>How the seller can prove he provided it?</li>
+                <li>What is the buyer's and seller's alias (their username on another platform)?</li>
+            </ul>
+            <p>If any of the non-optional questions can't be answered, you shouldn't use our service.</p>
+        </div>
+        <div class="details_buyer">
+            <h3>You are Seller !</h3>
+           
+              
+            </select>
+            <div class="input-group">
+                <label for="name">Trade Name:</label>
+                <input type="text" id="name" placeholder="Short discription for trade name">
+              </div>
+              <label>Trade Amount:</label>
+              <Input type="number" placeholder="Enter amount " id="amount">
+<label>Tradde Agreement:</label>
+<textarea class="agre" placeholder="Both parties confirm the transaction will be completed within 24 hours upon receiving the payment in full."></textarea>
+<label for="duration">Select Trade Duration:</label>
+<select id="duration" name="tradeDuration">
+  <option value="24hours">24 hours</option>
+  <option value="2days">2 days</option>
+  <option value="3days">3 days</option>
+  <option value="7days">7 days</option>
+  <option value="10days">10 days</option>
+  <option value="1month">1 month</option>
+</select>
+
+<form action="verify.php" method="post" class="captcha">
+   
+    
+    <img src="captcha.php" alt="CAPTCHA Image" style="background-size: cover;" id="imgcatpcha">
+    <br>
+    <label for="captcha">Enter the CAPTCHA:</label>
+    <input type="text" id="captcha" name="captcha" required class="inpcss">
+    <br>
+    <input type="submit" value="Submit" class="btnforsub">
+</form>
+          
+        </div>
+    </div>
+  
+
+  
+</body>
+</html>

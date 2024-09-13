@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1d;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    height: 70px;
+    background: linear-gradient(90deg, #282a36, #3a3f51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 22px;
+}
+
+header h1 {
+    color: #8be9fd;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header h1 span {
+    color: #b580fe;
+}
+
+.navbaropt1 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #f8f8f2;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+a:hover {
+    color: #50fa7b; /* Adjusted for better contrast */
+    text-shadow: 0px 0px 5px #50fa7b;
+}
+
+.navbaropt2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbaropt2 button {
+    background-color: transparent;
+    border: 2px solid #6272a4;
+    color: #f8f8f2;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbaropt2 button:hover {
+    cursor: pointer;
+    background-color: #44475a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.checktrade {
+    background-color: rgba(80, 250, 123, 0.2);
+    border-color: #50fa7b;
+}
+
+.starttrade {
+    background-color: rgba(139, 233, 253, 0.2);
+    border-color: #8be9fd;
+}
+
+.starttrade2 {
+    background-color: rgba(139, 233, 253, 0.2);
+    border-color: #8be9fd;
+    padding: 10px;
+    color: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.starttrade2:hover {
+    background-color: rgba(139, 232, 253, 0.6);
+}
+
+.home {
+    text-align: center;
+    padding: 30px;
+    margin: 60px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.home h1 span {
+    color: #b580fe;
+}
+
+.textbox {
+    background-color: #282a36;
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+img {
+    height: 70px;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbaropt1 .active {
+    border-bottom: 2px solid #50fa7b;
+}
+
+.terms {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.terms li {
+    padding: 10px;
+    margin: 10px;
+    background-color: #3a3f51; /* Slightly lighter for better readability */
+    color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.faq {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.faq h1 {
+    color: #50fa7b;
+    margin: 20px;
+}
+
+.checktrades {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.checktrades input {
+    background-color: #282a36;
+    color: #f8f8f2;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #6272a4;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.checktrades button {
+    background-color: #6272a4;
+    color: #f8f8f2;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #6272a4;
+    width: 250px;
+    margin: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #44475a;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.checktrades h1 {
+    color: #50fa7b;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.faqhed {
+    color: #50fa7b;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.terms h1 {
+    color: #50fa7b;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.starttrades button {
+    background-color: #6272a4;
+    color: #f8f8f2;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #6272a4;
+    width: 250px;
+    margin-left: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.starttrades {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.starttrades h2 {
+    background-color: #44475a; /* Slightly adjusted for better contrast */
+    padding: 10px;
+}
+/* Responsive Styling */
+@media (max-width: 1200px) {
+    .home, .terms, .faq, .checktrades, .starttrades {
+        margin: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px;
+    }
+
+    .navbaropt1, .navbaropt2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .starttrades button {
+        margin-left: 0;
+    }
+
+    .home, .terms, .faq, .checktrades, .starttrades {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .navbaropt1, .navbaropt2 {
+        gap: 8px;
+    }
+
+    .home h1 span, .terms h1, .faq h1, .checktrades h1, .faqhed, .starttrades h2 {
+        font-size: 1.5em;
+    }
+
+    .checktrades input {
+        font-size: 14px;
+    }
+
+    .checktrades button, .starttrades button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home, .terms, .faq, .checktrades, .starttrades {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    header {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .checktrades input {
+        padding: 10px;
+    }
+
+    .checktrades button, .starttrades button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    img {
+        height: 50px;
+    }
+}
+
+/* Trade Agreement Section */
+.trade-agreement {
+    background-color: #2e3440; /* Dark background for contrast */
+    color: #d8dee9; /* Light text color for readability */
+    border-radius: 8px; 
+    padding: 20px;
+    width: 100%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.trade-agreement h2 {
+    color: #bf616a; /* Accent color for headings */
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.trade-agreement p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.trade-agreement ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.trade-agreement li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Details Buyer Section */
+.details_buyer {
+    background-color: #2e3440; /* Dark background for contrast */
+    color: #d8dee9; /* Light text color for readability */
+    border-radius: 8px; 
+    padding: 20px;
+    width: 100%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.details_buyer h3 {
+    margin-bottom: 10px;
+    font-size: 30px; /* Adjusted size for better readability */
+}
+
+.details_buyer label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.details_buyer input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Details Section */
+.details {
+    display: block; /* Hide all details sections by default */
+}
+
+/* Button Styling */
+.bsbtn {
+    color: #d8dee9; /* Light text color */
+    background-color: #2e3440; /* Dark background */
+    font-size: 20px;
+    width: 50px;
+}
+
+.bsbtn a {
+    color: #d8dee9; /* Light text color */
+}
+
+.bsbtn h4 {
+    background-color: #4c566a; /* Slightly lighter background for buttons */
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.bsbtn h4:hover {
+    background-color: #81a1c1; /* Hover effect */
+    color: #2e3440; /* Dark text color on hover */
+}
+
+/* Select Box Styling */
+select {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #4c566a;
+    background-color: #4c566a;
+    color: white;
+    width: 200px;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:hover {
+    background-color: #4c566a;
+    color: white; /* Darker hover effect */
+}
+
+select:focus {
+    outline: none;
+    background-color: #4c566a;
+    color: white;
+}
+
+option {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #4c566a;
+    color: white;
+}
+
+/* Label Styling */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d8dee9;
+    display: block;
+}
+
+/* Input Text Field Styling */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4c566a;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #4c566a;
+    color: white;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:hover {
+    background-color: #2d3440;
+    color: white;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3b4252;
+    background-color: #4c566a;
+    color: white;
+}
+
+input[type="text"]::placeholder {
+    color:white
+}
+
+input[type="text"]:disabled {
+    background-color: #4c566a;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Input Number Styling */
+#amount {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4c566a;
+    border-radius: 6px;
+    width: 15%;
+    box-sizing: border-box;
+    background-color: #4c566a;
+    color: white;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="number"]:hover {
+    background-color: #323846;
+    color: white;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #272b36;
+    background-color: #eceff4;
+}
+
+input[type="number"]::placeholder {
+    color: #4c566a;
+}
+
+input[type="number"]:disabled {
+    background-color: #d8dee9;
+    cursor: not-allowed;
+}
+
+/* Textarea Styling */
+.agre {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4c566a;
+    border-radius: 8px;
+    background-color: #4c566a;
+    color: white;
+    box-sizing: border-box;
+    resize: vertical;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.agre:hover {
+    background-color: #4c566a;
+    color: white;
+}
+
+.agre:focus {
+    outline: none;
+    background-color: #363e4d;
+    color: white;
+}
+
+.agre::placeholder {
+    color: #4c566a;
+}
+
+.agre:disabled {
+    background-color: #4c566a;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Input Group Spacing */
+.input-group {
+    margin-bottom: 16px;
+}
+
+/* Textarea Group Spacing */
+.textarea-group {
+    margin-bottom: 16px;
+
+}
+/* Button Style for btnforsub */
+.btnforsub {
+    background-color:#44475a; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure the button fits its content */
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 20px; /* Smooth transitions */
+}
+
+.btnforsub:hover {
+    background-color: #4e6f92; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.btnforsub:active {
+    background-color: #749fca; /* Even darker blue when pressed */
+    transform: scale(0.95); /* Slightly shrink button when pressed */
+}
+
+.btnforsub:disabled {
+    background-color: #4c566a;
+    color: white;/* Darker grey text */
+    cursor: not-allowed; /* Not-allowed cursor for disabled state */
+    transform: none; /* Remove transform effects */
+}
+#duration{
+    background-color: #4c566a;
+    color: white;
+}
