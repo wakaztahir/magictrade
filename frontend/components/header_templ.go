@@ -207,7 +207,7 @@ func Header() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">Trade<span style=\"color:#b580fe\">Safe</span></h1><a href=\"home.html\">Home</a> <a href=\"terms.html\">Terms</a> <a href=\"faq.html\">FAQ</a></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">Trade<span style=\"color:#b580fe\">Safe</span></h1><a href=\"/\">Home</a> <a href=\"/terms\">Terms</a> <a href=\"/faq\">FAQ</a></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -229,7 +229,7 @@ func Header() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\"><a href=\"checktrade.html\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\"><a href=\"/check\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -251,7 +251,7 @@ func Header() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">CHECK TRADE</button></a> <a href=\"starttrade.html\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">CHECK TRADE</button></a> <a href=\"/start\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

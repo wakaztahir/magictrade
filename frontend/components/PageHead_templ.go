@@ -29,7 +29,7 @@ func PageHead() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"static/main.css\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><style>\n            * {\n                margin: 0;\n                padding: 0;\n                box-sizing: border-box;\n            }\n\n            body {\n                font-family: 'Arial', sans-serif;\n                background-color: #1a1a1d;\n                color: #f0f0f0;\n                line-height: 1.6;\n            }\n\n            a {\n                text-decoration: none;\n                color: #f8f8f2;\n                transition: color 0.4s ease, text-shadow 0.4s ease;\n            }\n\n            a:hover {\n                color: #50fa7b; /* Adjusted for better contrast */\n                text-shadow: 0px 0px 5px #50fa7b;\n            }\n        </style>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

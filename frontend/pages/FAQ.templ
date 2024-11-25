@@ -1,0 +1,60 @@
+package frontend
+
+import frontend "magictrade/frontend/components"
+
+css faq() {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+css faqhed() {
+    margin: 20px;
+    color: #50fa7b;
+    display: flex;
+    justify-content: flex-start;
+}
+
+var faqStyleHandle = templ.NewOnceHandle()
+
+templ Faq() {
+<!DOCTYPE html>
+<html lang="en">
+  @frontend.PageHead() {
+      <title>MagicTrade</title>
+  }
+  <body>
+        @frontend.Header()
+        @faqStyleHandle.Once() {
+            <style>
+
+            </style>
+        }
+        <div class={ faq() }>
+            <h1 class={ faqhed() }>Faq</h1>
+            <h1>What currencies do you accept?</h1>
+            <p>
+                Deposits can be made in Monero or Bitcoin.<br />
+                Withdrawals are Monero only.
+            </p>
+            <h1>What fees do you charge?</h1>
+            <p>
+                We have no fees except a 4% withdrawal fee.<br />
+                The party, usually the seller (except for disputes), who receives the funds pays the withdrawal fee.
+            </p>
+            <h1>My deposit hasn't shown up?</h1>
+            <p>
+                Make sure you sent the exact amount displayed on the payment page.<br />
+                If your deposit hasn't been credited after 15 confirmations (10 for Bitcoin deposits), contact us.
+            </p>
+            <h1>How long do I have to open a dispute?</h1>
+            <p>
+                Buyers have until the finalization time is over to dispute.
+                If the buyer doesn't dispute before the finalization timer is over, the funds are transferred to the seller.
+            </p>
+        </div>
+  </body>
+</html>
+}

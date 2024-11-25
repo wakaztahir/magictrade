@@ -1,0 +1,66 @@
+package frontend
+
+import frontend "magictrade/frontend/components"
+
+css check_trades_div() {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+css check_trades_input() {
+    background-color: #282a36;
+    color: #f8f8f2;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #6272a4;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+css check_trades_btn() {
+    margin-top : 12px;
+}
+
+css check_trade_h1() {
+    color: #50fa7b;
+    display: flex;
+}
+
+var checkTradeStyleHandle = templ.NewOnceHandle()
+
+templ CheckTrade() {
+<!DOCTYPE html>
+<html lang="en">
+  @frontend.PageHead() {
+      <title>MagicTrade</title>
+  }
+  <body>
+        @frontend.Header()
+        @checkTradeStyleHandle.Once() {
+            <style>
+
+            </style>
+        }
+        <div class={ check_trades_div() }>
+            <h1 class={ check_trade_h1() }>Check trade</h1>
+            <p>Trade id (not your password)</p>
+            <input placeholder="Trade id example: TRD-20240901-XY123456" class={ check_trades_input() }/>
+            <a href="#" class={ check_trades_btn() }>
+                @frontend.LargeButton() {
+                   Check Trade
+                }
+            </a>
+        </div>
+  </body>
+</html>
+
+}

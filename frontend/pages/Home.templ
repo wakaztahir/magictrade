@@ -31,7 +31,7 @@ css start_trade_btn() {
     transition: background-color 0.3s ease;
 }
 
-var styleHandler = templ.NewOnceHandle()
+var homeStyleHandler = templ.NewOnceHandle()
 
 templ Home() {
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ templ Home() {
   }
   <body>
         @frontend.Header()
-        @styleHandler.Once() {
+        @homeStyleHandler.Once() {
             <style>
                 .starttrade_btn2:hover {
                     background-color: rgba(139, 232, 253, 0.6);
@@ -67,7 +67,7 @@ templ Home() {
             <div class={ textbox() }>
                 If the seller didn't provide what was agreed, the buyer can open a dispute. A conversation between the buyer, seller, and moderator is opened to clarify the situation.
             </div>
-            <a href="starttrade.html"><button class={ start_trade_btn(), "starttrade_btn2" }>START TRADE</button></a>
+            <a href="/start"><button class={ start_trade_btn(), "starttrade_btn2" }>START TRADE</button></a>
         </div>
   </body>
 </html>

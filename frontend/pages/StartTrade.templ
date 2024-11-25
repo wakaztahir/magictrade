@@ -1,0 +1,87 @@
+package frontend
+
+import frontend "magictrade/frontend/components"
+
+css working() {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+css working_h1() {
+    color: #50fa7b;
+    display: flex;
+    justify-content: flex-start;
+}
+
+css working_item() {
+    padding: 10px;
+    margin: 10px;
+    background-color: #3a3f51;
+    color: #f0f0f0;
+    border-radius: 5px;
+}
+
+css start_trades_div() {
+    padding: 30px;
+    margin: 60px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+css start_trade_title() {
+    background-color: #44475a; /* Slightly adjusted for better contrast */
+    padding: 10px;
+}
+
+var startTradeStyleHandle = templ.NewOnceHandle()
+
+templ StartTrade() {
+<!DOCTYPE html>
+<html lang="en">
+  @frontend.PageHead() {
+      <title>MagicTrade</title>
+  }
+  <body>
+        @frontend.Header()
+        @startTradeStyleHandle.Once() {
+            <style>
+
+            </style>
+        }
+        <div class={ start_trades_div() }>
+            <h2 class={ start_trade_title() }>Here's how a trade works</h2>
+
+            <!-- Insert the content of the Terms component here -->
+            <div class={ working() }>
+                <h1 class={ working_h1() }>Working</h1>
+                <ul>
+                    <li class={ working_item() }>The finalization timer starts as soon as the buyer pays.</li>
+                    <li class={ working_item() }>The buyer can choose to release funds at any time. If they don't, the seller will have to wait until the finalization time is over.</li>
+                    <li class={ working_item() }>The buyer has until the finalization time is over to dispute. If the buyer doesn't dispute before the finalization timer is over, the funds are transferred to the seller.</li>
+                    <li class={ working_item() }>If a seller doesn't deliver the goods in the designated time, the buyer can choose to extend the time by disputing or be refunded by disputing.</li>
+                    <li class={ working_item() }>The trade amount, agreement, and finalization time are binding and cannot be changed.</li>
+                    <li class={ working_item() }>In the event of a dispute, the moderator's decision is based ONLY on the trade agreement. Extra details or side deals not included in the trade agreement will not affect the moderator's decision unless both parties agree to them.</li>
+                    <li class={ working_item() }>Failing to fill out the trade agreement correctly might cause loss of funds. We are not responsible if you don't fill out the trade agreement correctly.</li>
+                    <li class={ working_item() }>There are no fees except a 4% withdrawal fee.</li>
+                    <li class={ working_item() }>Deposits can be made in Monero or Bitcoin. Withdrawals are Monero only.</li>
+                    <li class={ working_item() }>Before starting a trade, make sure there is a way for the seller to prove they provided the goods. If there is not, you risk losing your money.</li>
+                    <li class={ working_item() }>Dispute decisions can either be full or partial refunds.</li>
+                </ul>
+            </div>
+
+            <a href="/details">
+                @frontend.LargeButton() {
+                    Start
+                }
+            </a>
+        </div>
+  </body>
+</html>
+
+}
