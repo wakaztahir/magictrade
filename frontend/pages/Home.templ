@@ -2,32 +2,74 @@ package frontend
 
 import frontend "magictrade/frontend/components"
 
+css home() {
+    text-align: center;
+    padding: 30px;
+    margin: 60px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+css textbox() {
+    background-color: #282a36;
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+css start_trade_btn() {
+    background-color: rgba(139, 233, 253, 0.2);
+    border-color: #8be9fd;
+    padding: 10px;
+    color: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+var styleHandler = templ.NewOnceHandle()
+
 templ Home() {
-
-    @frontend.Page() {
-
-        <div class="home">
-            <h1>Welcome to<span> TradeSafe</span> - we make every trade fair</h1>
+<!DOCTYPE html>
+<html lang="en">
+  @frontend.PageHead() {
+      <title>MagicTrade</title>
+  }
+  <body>
+        @frontend.Header()
+        @styleHandler.Once() {
+            <style>
+                .starttrade_btn2:hover {
+                    background-color: rgba(139, 232, 253, 0.6);
+                }
+            </style>
+        }
+        <div class={ home() }>
+            <h1>Welcome to <span style="color:#b580fe">MagicTrade</span> - we make every trade fair</h1>
             <p>anonymous crypto escrow service</p>
             <h2>How it Works</h2>
-            <div class="textbox">
+            <div class={ textbox() }>
                 The buyer or seller creates a new trade. They then receive a password that allows them to track the trade and a link to share with the other party.
             </div>
-            <div class="textbox">
+            <div class={ textbox() }>
                 The other party clicks on the link then receives their password.
             </div>
-            <div class="textbox">
+            <div class={ textbox() }>
                 The buyer pays the requested amount. The seller provides the specified product or service. The buyer finalizes the trade after receiving the product or service. The seller can then withdraw their money.
             </div>
-            <div class="textbox">
+            <div class={ textbox() }>
                 If the buyer forgets to log in, the seller automatically receives the funds after the finalization timer expires.
             </div>
-            <div class="textbox">
+            <div class={ textbox() }>
                 If the seller didn't provide what was agreed, the buyer can open a dispute. A conversation between the buyer, seller, and moderator is opened to clarify the situation.
             </div>
-            <a href="starttrade.html"><button class="starttrade2">START TRADE</button></a>
+            <a href="starttrade.html"><button class={ start_trade_btn(), "starttrade_btn2" }>START TRADE</button></a>
         </div>
-
-    }
+  </body>
+</html>
 
 }

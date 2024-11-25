@@ -9,6 +9,9 @@ import (
 
 func main() {
 
+	http.HandleFunc("/static/main.css", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "static/main.css")
+	})
 	http.Handle("/", templ.Handler(frontend.Home()))
 
 	fmt.Println("Listening on :3000")
